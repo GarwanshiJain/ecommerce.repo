@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zay Shop - Ecommerce Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        img {
+            max-width: 100%;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #3e8e41;
+        }
+        
+        /* Header Styles */
+        .nav-social {
+            background-color: #222;
+            color: white;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .social-contact a {
+            color: white;
+            margin-right: 15px;
+        }
+        
+        .social-icons i {
+            margin-left: 10px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .social-icons i:hover {
+            color: #4CAF50;
+        }
+        
+        /* Main Navigation */
+        .home {
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .home1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            color: #4CAF50;
+            font-size: 28px;
+        }
+        
+        .home-link {
+            display: flex;
+            gap: 25px;
+        }
+        
+        .home-link a {
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .home-link a:hover {
+            color: #4CAF50;
+        }
+        
+        .finds {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .cart, .user {
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .c7, .u99 {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #f5eae8;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .search i, .cart i, .user i {
+            font-size: 18px;
+        }
+        
+        /* Hero Section */
+        .light {
+            background-color: #f5eae8;
+            padding: 60px 0;
+        }
+        
+        .light1 {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .L-text {
+            flex: 1;
+        }
+        
+        .L-text h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        
+        .L-text h3 {
+            font-size: 22px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        
+        .L-img {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Categories Section */
+        .container-heading {
+            text-align: center;
+            padding: 60px 0 30px;
+        }
+        
+        .container-heading h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        
+        .items {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 30px 0 60px;
+        }
+        
+        .watch, .shoes, .glasses {
+            text-align: center;
+            flex: 1;
+            transition: transform 0.3s;
+        }
+        
+        .watch:hover, .shoes:hover, .glasses:hover {
+            transform: translateY(-10px);
+        }
+        
+        .w1, .s1, .g1 {
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .w1 {
+            background-image: url('https://templatemo.com/templates/templatemo_559_zay_shop/assets/img/category_img_01.jpg');
+        }
+        
+        .s1 {
+            background-image: url('https://templatemo.com/templates/templatemo_559_zay_shop/assets/img/category_img_02.jpg');
+        }
+        
+        .g1 {
+            background-image: url('https://templatemo.com/templates/templatemo_559_zay_shop/assets/img/category_img_03.jpg');
+        }
+        
+        .w2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        /* Featured Products */
+        .featured-product {
+            background-color: #f5eae8;
+            padding: 60px 0;
+        }
+        
+        .feature {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        .feature h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        
+        .product {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .gym, .cloud, .summer {
+            flex: 1;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .gym:hover, .cloud:hover, .summer:hover {
+            transform: translateY(-10px);
+        }
+        
+        .gym-img, .cloud-img, .summer-img {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .gym-img img, .cloud-img img, .summer-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .gym:hover img, .cloud:hover img, .summer:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gym-txt, .cloudtxt, .summer-txt {
+            padding: 20px;
+        }
+        
+        .gym-txt h2, .cloudtxt h2, .summer-txt h2 {
+            margin-bottom: 10px;
+        }
+        
+        .rating {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        
+        .price {
+            color: #777;
+            font-weight: 600;
+        }
+        
+        /* Newsletter Section */
+        .newsletter {
+            background-color: #4CAF50;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .newsletter h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .newsletter p {
+            margin-bottom: 25px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+        
+        .newsletter-form button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 0 25px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .newsletter-form button:hover {
+            background-color: #222;
+        }
+        
+        /* Footer */
+        .about {
+            background-color: #222;
+            color: white;
+            padding: 60px 0 0;
+        }
+        
+        .links {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            padding-bottom: 40px;
+        }
+        
+        .contact, .product-links, .info {
+            flex: 1;
+        }
+        
+        .shop h1 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+        
+        .contact hr, .product-links hr, .info hr {
+            border: none;
+            height: 1px;
+            background-color: #444;
+            margin: 15px 0;
+        }
+        
+        .cont-links i {
+            margin-right: 10px;
+            width: 20px;
+        }
+        
+        .cont-links span {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .product-links a, .info a {
+            display: block;
+            margin-bottom: 8px;
+            transition: color 0.3s;
+        }
+        
+        .product-links a:hover, .info a:hover {
+            color: #4CAF50;
+        }
+        
+        .address {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-top: 1px solid #444;
+        }
+        
+        .icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .fb, .insta, .twtr, .ln {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid white;
+            border-radius: 50%;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .fb:hover, .insta:hover, .twtr:hover, .ln:hover {
+            background-color: #4CAF50;
+            border-color: #4CAF50;
+        }
+        
+        .subscribe form {
+            display: flex;
+        }
+        
+        .subscribe input {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+        
+        .subscribe button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        
+        .copyright {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        .copyright a {
+            color: #4CAF50;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .light1 {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .L-text, .L-img {
+                flex: none;
+                width: 100%;
+            }
+            
+            .items, .product {
+                flex-wrap: wrap;
+            }
+            
+            .watch, .shoes, .glasses, .gym, .cloud, .summer {
+                flex: 0 0 calc(50% - 15px);
+                margin-bottom: 30px;
+            }
+            
+            .links {
+                flex-wrap: wrap;
+            }
+            
+            .contact, .product-links, .info {
+                flex: 0 0 calc(50% - 15px);
+                margin-bottom: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .social-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .home1 {
+                flex-wrap: wrap;
+            }
+            
+            .home-link {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 15px;
+                margin-top: 20px;
+            }
+            
+            .home-link.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .finds {
+                gap: 15px;
+            }
+            
+            .w1, .s1, .g1 {
+                height: 200px;
+                width: 200px;
+            }
+            
+            .watch, .shoes, .glasses, .gym, .cloud, .summer {
+                flex: 0 0 100%;
+            }
+            
+            .contact, .product-links, .info {
+                flex: 0 0 100%;
+            }
+            
+            .address {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .newsletter-form input, .newsletter-form button {
+                width: 100%;
+                border-radius: 4px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .L-text h1 {
+                font-size: 28px;
+            }
+            
+            .container-heading h1, .feature h1 {
+                font-size: 26px;
+            }
+            
+            .w1, .s1, .g1 {
+                height: 150px;
+                width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Social Bar -->
+    <div class="nav-social">
+        <div class="container">
+            <div class="social-links">
+                <div class="social-contact">
+                    <a href="#"><i class="fa-solid fa-envelope"></i> info@company.com</a>
+                    <a href="#"><i class="fa-solid fa-phone-flip"></i> 83494854758</a>
+                </div>
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <div class="home">
+        <div class="container">
+            <div class="home1 header">
+                <div class="logo"><h1>Zay</h1></div>
+                
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+                <div class="home-link">
+                    <a href="product.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                
+                <div class="finds">
+                    <div class="search"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <div class="cart">
+                        <div class="c7">7</div>
+                        <div class="c-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                    </div>
+                    <div class="user">
+                        <div class="u99">+99</div>
+                        <div class="u-icn"><i class="fa-solid fa-user"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="light">
+        <div class="container">
+            <div class="light1 hero">
+                <div class="L-text lead">
+                    <h1>Repr in voluptate</h1>
+                    <h3>Ullamco laboris nisi ut</h3>
+                    <p>We bring you 100% free CSS templates for your websites. If you wish to support TemplateMo, please make a small contribution via PayPal or tell your friends about our website. Thank you.</p>
+                    <br>
+                    <a href="#" class="btn">Shop Now</a>
+                </div>
+                <div class="L-img">
+                    <img src="https://templatemo.com/templates/templatemo_559_zay_shop/assets/img/banner_img_03.jpg" alt="Banner">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categories Section -->
+    <div class="container container-heading">
+        <h1>Categories of The Month</h1>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <div class="container">
+        <div class="items">
+            <div class="watch">
+                <div class="w1"></div>
+                <div class="w2">Watches</div>
+                <a href="shop.html" class="btn">Go Shop</a>
+            </div>
+            <div class="shoes">
+                <div class="s1"></div>
+                <div class="w2">Shoes</div>
+                <a href="shop.html" class="btn">Go Shop</a>
+            </div>
+            <div class="glasses">
+                <div class="g1"></div>
+                <div class="w2">Accessories</div>
+                <a href="shop.html" class="btn">Go Shop</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Products -->
+    <div class="featured-product">
+        <div class="container">
+            <div class="feature">
+                <h1>Featured Product</h1>
+                <p>Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+            </div>
+            
+            <div class="product">
+                <div class="gym fade-in">
+                    <div class="gym-img">
+                        <img src="https://templatemo.com/templates/templatemo_559_zay_shop/assets/img/feature_prod_01.jpg" alt="Gym Weight">
+                    </div>
+                    <div class="gym-txt">
+                        <h2>Gym Weight</h2>
+                        <div class="rating">
+                            <span>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #c1c3c8;"></i>
+                                <i class="fa-solid fa-star" style="color: #c1c3c8;"></i>
+                            </span>
+                            <span class="price">$240.00</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla totam fugit</p>
+                        <br>
+                        <p style="color: grey;">Reviews (24)</p>
+                        <button class="btn add-to-cart" data-id="p1" data-name="Gym Weight" data-price="240" style="margin-top: 10px;">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="cloud fade-in">
+                    <div class="cloud-img">
+                        <img src="https://templatemo.com/templates/templatemo_559_zay_shop/assets/img/feature_prod_02.jpg" alt="Cloud Nike Shoes">
+                    </div>
+                    <div class="cloudtxt">
+                        <h2>Cloud Nike Shoes</h2>
+                        <div class="rating">
+                            <span>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #c1c3c8;"></i>
+                                <i class="fa-solid fa-star" style="color: #c1c3c8;"></i>
+                            </span>
+                            <span class="price">$480.00</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sequi inventore cum quos quam dolor blanditiis animi similique eum ad!</p>
+                        <br>
+                        <p style="color: grey;">Reviews (24)</p>
+                        <button class="btn add-to-cart" data-id="p2" data-name="Cloud Nike Shoes" data-price="480" style="margin-top: 10px;">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="summer fade-in">
+                    <div class="summer-img">
+                        <img src="https://templatemo.com/templates/templatemo_559_zay_shop/assets/img/feature_prod_03.jpg" alt="Summer Addides Shoes">
+                    </div>
+                    <div class="summer-txt">
+                        <h2>Summer Addides Shoes</h2>
+                        <div class="rating">
+                            <span>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            </span>
+                            <span class="price">$360.00</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente accusamus delectus adipisci totam culpa</p>
+                        <br>
+                        <p style="color: grey;">Reviews (24)</p>
+                        <button class="btn add-to-cart" data-id="p3" data-name="Summer Addides Shoes" data-price="360" style="margin-top: 10px;">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter Section -->
+    <div class="newsletter">
+        <div class="container">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Stay updated with our latest products and exclusive offers</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="about">
+        <div class="container">
+            <div class="links">
+                <div class="contact">
+                    <div class="shop"><h1>Zay Shop</h1></div>
+                    <hr>
+                    <div class="cont-links">
+                        <span><i class="fa-solid fa-location-dot"></i>123 Consectetur at ligula 10660</span><br>
+                        <span><i class="fa-solid fa-phone-flip"></i>010-020-0340</span><br>
+                        <span><i class="fa-solid fa-envelope"></i>info@company.com</span>
+                    </div>
+                </div>
+                
+                <div class="product-links">
+                    <h1>Products</h1>
+                    <hr>
+                    <a href="#">Luxury</a>
+                    <a href="#">Sport Wear</a>
+                    <a href="#">Men's Shoes</a>
+                    <a href="#">Women's Shoes</a>
+                    <a href="#">Popular Dress</a>
+                    <a href="#">Gym Accessories</a>
+                    <a href="#">Sport Shoes</a>
+                </div>
+                
+                <div class="info">
+                    <h1>Further Info</h1>
+                    <hr>
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Shop Locations</a>
+                    <a href="#">FAQs</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            
+            <div class="address">
+                <div class="icons">
+                    <div class="fb"><i class="fa-brands fa-facebook-f"></i></div>
+                    <div class="insta"><i class="fa-brands fa-instagram"></i></div>
+                    <div class="twtr"><i class="fa-brands fa-twitter"></i></div>
+                    <div class="ln"><i class="fa-brands fa-linkedin"></i></div>
+                </div>
+                
+                <div class="subscribe">
+                    <form>
+                        <input type="email" placeholder="Email Address">
+                        <button>Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <div class="container">
+                Copyright © 2021 Company Name | Designed by <a href="#"><u>TemplateMo</u></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

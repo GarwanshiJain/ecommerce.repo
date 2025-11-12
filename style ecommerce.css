@@ -1,0 +1,327 @@
+/*lnked to  ecommercepage.html*/
+  .nav-social{
+            width: 100%;height: 50px;background-color: black;
+        } 
+        .social-contact a{
+            color: aliceblue;text-decoration: none;
+        }
+        .social-links{
+            display: flex;
+            justify-content: space-between;
+            width: 90%;margin: 0px auto;
+            line-height: 50px;
+        }
+        .social-icons{
+            color: aliceblue;
+        }
+
+        .home{
+          padding-left:7% ;
+          padding-right: 7%;
+        }
+        .home1{
+            display: flex;
+            justify-content: space-between;
+        }
+        .logo{
+            color: green;
+        }
+        .home-link{
+            display: flex;
+            justify-content: space-between;
+            width: 40%;
+            align-items: center;
+        }
+        a{
+            text-decoration: none;
+        }
+        .finds{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 9%;
+        }
+        .cart{
+            
+        }
+        .c7{
+           background-color: rgb(245, 234, 236);
+             border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           position: absolute;
+    right: 150px;
+    top: 77px;
+            z-index: 2;
+        }
+        .c-icon{
+            position:relative;
+            z-index: 1;
+        }
+        .u99{
+ background-color: rgb(245, 234, 236);
+             border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+             position: absolute;
+    right: 80px;
+    top: 76px;
+            z-index: 2;
+            width: 40px;
+        }
+         .u-icon{
+            position:relative;
+            z-index: 1;
+        }
+        .light{
+            background-color: rgb(245, 234, 236);
+            height:600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .light1{
+            /* border: solid; */
+            height: 70%;
+            width: 60%;
+            display: flex;
+        }
+        .L-text{
+            width: 50%;
+            height: 100%;
+            /* border: solid; */
+            padding-top:100px;
+            box-sizing:border-box;
+        }
+        .L-img{
+              width: 50%;
+            height: 100%;
+            /* border: solid; */
+            
+
+        }
+
+        .container{
+            /* border: solid; */
+            display: flex;
+            flex-direction: column;
+            height:200px;
+           align-items: center;
+           justify-content: center;
+        }
+        .heading{
+            /* border: solid; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;justify-content: center;
+           
+
+        }
+        .items{
+             /* border: solid; */
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             height: 600px;
+             justify-content: space-evenly;
+
+        }
+        .watch{
+            display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+            
+        }
+        .w1{
+            /* border: solid; */
+            box-sizing: content-box;
+            border-radius: 1000px;
+            height: 300px;width: 300px;
+            background-image: url(https://templatemo.com/templates/templatemo_559_zay_shop/assets/img/category_img_01.jpg);
+            background-repeat: round;
+        }
+        .shoes{
+            
+            display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;     
+        }
+        .s1{
+             /* border: solid; */
+            box-sizing: content-box;
+            border-radius: 1000px;
+            height: 300px;width: 300px;
+            background-image: url(https://templatemo.com/templates/templatemo_559_zay_shop/assets/img/category_img_02.jpg);
+            background-repeat: round;
+
+        }
+
+         .glasses{
+            
+            display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;     
+        }
+        .g1{ 
+            /* border: solid; */
+            box-sizing: content-box;
+            border-radius: 1000px;
+            height: 300px;width: 300px;
+            background-image: url(https://templatemo.com/templates/templatemo_559_zay_shop/assets/img/category_img_03.jpg);
+            background-repeat: round;
+
+        }
+        .featured-product{
+            height: 1000px;
+            /* border: solid; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+              background-color:rgb(245, 234, 236);
+        }
+        .feature{
+            /* border: solid;  */
+            height: 200px;
+            width: 40%;
+            text-align-last: center;
+          
+        }
+        .product{
+           
+             display: flex;
+             /* border: solid; */
+             justify-content: center;
+             align-items: center;
+             height: 60%;
+             justify-content: space-evenly;
+
+        }
+
+        .gym{
+            width: 30%;
+            height: 600px;
+            /* border: solid; */
+             /* box-shadow:8px, 8px, 4px rgb(225, 55, 83); */
+        }
+        .rating{
+            display: flex;
+            justify-content: space-between;
+        }
+        .cloud{
+             width: 30%;
+            height: 600px;
+            /* border: solid; */
+        }
+        .summer{
+             width: 30%;
+            height: 600px;
+            /* border: solid; */
+        }
+
+
+        .about{
+             background-color: rgb(15, 15, 15);
+          
+            display: flex;
+            flex-direction:column;
+        }
+        .links{
+            display: flex;
+            justify-content: space-evenly;
+                        /* border: solid white; */
+
+        }
+        .contact{
+          width: 25%;
+
+
+        }
+        .shop{
+            color:rgb(123, 220, 123);
+                         /* border: solid white; */
+
+        }
+        .product-links{
+            color: white;
+         /* border: solid white; */
+
+             width: 25%;
+        }
+        .info{
+            width: 25%;
+        }
+        .address{
+            display: flex;
+            /* border: solid white; */
+            justify-content: space-between;
+            height: 80px;
+            align-items: center;
+            
+        }
+        .icons{
+            display: flex;
+            justify-content: space-around;
+            width: 15%;
+            margin-left: 6%;
+        }
+        .fb{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border:0.5px solid white;
+            border-radius: 30px;
+            height: 40px;
+            width: 40px;
+        }
+        .insta{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 0.5px solid white;
+            border-radius: 30px;
+            height: 40px;
+            width: 40px;
+        }
+        .twtr{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 0.5px solid white;
+            border-radius: 30px;
+            height: 40px;
+            width: 40px;
+        }
+        .ln{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border:0.5px solid white;
+            border-radius: 30px;
+            height: 40px;
+            width: 40px;
+        }
+
+        .subscribe{
+           height: 30px;
+           margin-right: 6%;
+             }
+         button{
+            background-color: rgb(109, 228, 109); 
+            height: 40px; width: 100px;
+            border: none;
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+        }
+        .copyright{
+              background-color: black;
+            color: white;
+            height: 100px;
+            line-height: 100px;
+            padding-left: 6%;
+        }

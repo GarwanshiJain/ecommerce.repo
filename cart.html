@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Your Cart - Zay Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{font-family:Segoe UI, Tahoma, Geneva, Verdana, sans-serif;margin:0;color:#333}
+        .container{width:90%;max-width:900px;margin:30px auto}
+        .btn{background:#4CAF50;color:#fff;padding:8px 12px;border-radius:4px;text-decoration:none;border:none;cursor:pointer}
+        .topbar{background:#222;color:#fff;padding:8px 0}
+        .c7{background:#f5eae8;border-radius:50%;padding:2px 8px;color:#111;margin-left:8px}
+        table{width:100%;border-collapse:collapse}
+        th,td{padding:8px;border-bottom:1px solid #eee}
+    </style>
+</head>
+<body>
+    <div class="topbar"><div class="container">Contact: info@company.com <span style="float:right">Cart <span class="c7">0</span></span></div></div>
+    <div class="container">
+        <header class="header" style="display:flex;justify-content:space-between;align-items:center">
+            <h1><a href="updation.html" style="color:inherit;text-decoration:none">Zay</a></h1>
+            <nav class="home-link">
+                <a href="updation.html">Home</a> |
+                <a href="shop.html">Shop</a>
+            </nav>
+        </header>
+
+        <h2 style="margin-top:20px">Your Cart</h2>
+        <div id="cart-contents" style="margin-top:15px">
+            <!-- rendered by app.js -->
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
